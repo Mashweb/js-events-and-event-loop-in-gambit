@@ -7,7 +7,7 @@ scheduling algorithm to handle a global queue of JavaScript events.
 
 One Gambit thread puts 'keydown' events into the queue.
 Another Gambit thread puts 'mousemove' events into the queue.
-Each of these threads are [blocked](https://www.math.purdue.edu/~lucier/615-2016/gambit.html#Thread-objects)
+Each of these threads are [blocked](https://gambitscheme.org/latest/manual/#Thread-objects)
 until it is made runnable by its corresponding event, 'keydown' or 'mousemove'.
 After enqueing its corresponding event, the thread is again blocked.
 Each subsequent 'keydown' or 'mousemove' event is handled the same way.
